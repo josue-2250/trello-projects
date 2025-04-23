@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Sharing Platform</title>
+    <link rel="stylesheet" href="./articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./index.html">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ShareYourThoughts</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">My Articles</a>
+                <a href="#" class="nav-link">Categories</a>
+                <div class="user-actions">
+                    <!-- <button id="loginBtn" class="btn btn-outline">Login</button> -->
+                    <!-- <button id="signupBtn" class="btn btn-primary" href="./index.html">Sign Up</button> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="write-article-section">
+            <h2>Write and Share Your Article</h2>
+            <form id="articleForm" class="article-form">
+                <div class="form-group">
+                    <label for="articleTitle">Title</label>
+                    <input type="text" id="articleTitle" placeholder="Enter your article title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="articleCategory">Category</label>
+                    <select id="articleCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="technology">Technology</option>
+                        <option value="business">Business</option>
+                        <option value="science">Science</option>
+                        <option value="health">Health</option>
+                        <option value="personal">Personal Development</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="articleContent">Your Article</label>
+                    <div class="toolbar">
+                        <button type="button" class="tool-btn" data-command="bold"><i class="fas fa-bold"></i></button>
+                        <button type="button" class="tool-btn" data-command="italic"><i
+                                class="fas fa-italic"></i></button>
+                        <button type="button" class="tool-btn" data-command="insertUnorderedList"><i
+                                class="fas fa-list-ul"></i></button>
+                        <button type="button" class="tool-btn" data-command="insertOrderedList"><i
+                                class="fas fa-list-ol"></i></button>
+                        <button type="button" class="tool-btn" data-command="createLink"><i
+                                class="fas fa-link"></i></button>
+                    </div>
+                    <div id="articleContent" contenteditable="true" class="content-editor"
+                        placeholder="Write your article here..."></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="saveDraftBtn" class="btn btn-secondary">Save Draft</button>
+                    <button type="submit" id="publishBtn" class="btn btn-primary">Publish Article</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="articles-section">
+            <h2>Recent Shared Articles</h2>
+            <div class="filter-controls">
+                <select id="filterCategory">
+                    <option value="all">All Categories</option>
+                    <option value="technology">Technology</option>
+                    <option value="business">Business</option>
+                    <option value="science">Science</option>
+                    <option value="health">Health</option>
+                    <option value="personal">Personal Development</option>
+                </select>
+                <select id="sortBy">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+
+            <div id="articlesContainer" class="articles-container">
+                <!-- Articles will be dynamically inserted here -->
+                <div class="no-articles">
+                    <p>No articles found. Be the first to share!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 ShareYourThoughts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Article Template (hidden) -->
+    <template id="articleTemplate">
+        <article class="article-card">
+            <div class="article-header">
+                <h3 class="article-title"></h3>
+                <span class="article-category"></span>
+            </div>
+            <div class="article-meta">
+                <span class="article-author"></span>
+                <span class="article-date"></span>
+                <span class="article-likes"><i class="far fa-thumbs-up"></i> <span class="like-count">0</span></span>
+            </div>
+            <div class="article-content"></div>
+            <div class="article-actions">
+                <button class="btn btn-sm btn-outline like-btn">Like</button>
+                <button class="btn btn-sm btn-outline share-btn">Share</button>
+                <button class="btn btn-sm btn-outline comment-btn">Comment</button>
+            </div>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

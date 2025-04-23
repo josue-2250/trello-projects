@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border;
+}
+body{
+    width: 100%;
+}
+.all{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.log{
+    padding: 20px;
+    color: rgb(61, 58, 58);
+    background-color: white;
+    text-decoration: none;
+}
+.account{
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(69, 69, 240);
+    border-radius: 50px;
+}
+.first{
+    display: flex;
+    text-align: center;
+    font-weight:600;
+    padding: 35px;
+    margin: 60px;
+    background-color: #0d1c1c13;
+    text-decoration: none;
+    width: 50%;
+    color: black;
+}

@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.conteiner {
+    background-color: rgb(152, 149, 149);
+    display: block;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 30px 30px;
+    color: black;
+    width: 60%;
+}
+
+.conteiner h1 {
+    color: rgb(87, 116, 87);
+    font-family: monospace;
+    padding-bottom: 40px;
+}
+
+.conteiner p {
+    padding-bottom: 30px;
+}
+
+img {
+    font-weight: 200;
+}
